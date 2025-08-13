@@ -1,0 +1,39 @@
+/* Index ♨︎ Title Name */
+#title {
+    display: flex;              /* Para centrar fácilmente */
+    justify-content: center;    /* Centrado horizontal */
+    align-items: center;        /* Centrado vertical si usas altura */
+    height: 100vh;              /* Toda la altura de la ventana */
+    font-size: 11rem;            /* Tamaño grande */
+}
+
+/* Fondo detrás del texto usando span */
+#title span {
+    /*background-color: yellow;    Color de fondo del texto */
+    padding: 0 10px;            /* Espacio alrededor del texto */
+    display: inline-block;
+    background-image: url('../img/canary_background_canterassunset.jpg'); /* tu imagen */
+    background-size: cover;       /* que cubra todo el texto */
+    font-weight: 900;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    -webkit-background-clip: text; /* recorta la imagen al texto */
+    -webkit-text-fill-color: transparent; /* hace el texto transparente para ver la imagen */
+}
+
+/* Animación: mover ligeramente hacia la izquierda al cargar */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1rem);
+        transform: translateY(-4rem);
+    }
+}
+
+/* Aplicar animación al span */
+#title span {
+    animation: moveLeft 1.3s ease forwards;
+}

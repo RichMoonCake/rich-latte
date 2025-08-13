@@ -1,0 +1,55 @@
+/* Reset CSS básico */
+
+/* Quitar márgenes y padding por defecto */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer fuente por defecto */
+body {
+    font-family: "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", Arial, sans-serif, Georgia;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Quitar estilos por defecto de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Quitar subrayado de enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Normalizar imágenes y videos */
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+/* Normalizar bordes de botones y inputs */
+button,
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Normalizar tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
