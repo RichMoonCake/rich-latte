@@ -4,11 +4,12 @@
     justify-content: center;    /* Centrado horizontal */
     align-items: center;        /* Centrado vertical si usas altura */
     height: 100vh;              /* Toda la altura de la ventana */
-    font-size: 11rem;            /* Tamaño grande */
+    font-size: 11rem;           /* Tamaño grande */
 }
 
 /* Fondo detrás del texto usando span */
 #title span {
+    
     /*background-color: yellow;    Color de fondo del texto */
     padding: 0 10px;            /* Espacio alrededor del texto */
     display: inline-block;
@@ -32,8 +33,13 @@
         transform: translateY(-4rem);
     }
 }
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
 
 /* Aplicar animación al span */
 #title span {
     animation: moveLeft 1.3s ease forwards;
+    animation: shine 4s linear infinite;
 }

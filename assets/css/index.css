@@ -1,29 +1,38 @@
-/* Contenedor de olas */
-.ocean {
+/* Icons */
+.icon {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
+    font-size: 2.5rem;
+    background: transparent; /* fondo transparente */
 }
 
-/* Olas SVG */
-.wave {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 100%;
-    animation: waveMove 15s linear infinite;
+#index {
+    /* Gradiente oscuro gris-negro-plateado */
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f, #2e2e2e, #3a3a3a, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 }
 
-.wave1 { animation-delay: 0s; }
-.wave2 { animation-delay: 5s; }
-.wave3 { animation-delay: 10s; }
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-@keyframes waveMove {
-    0%   { transform: translateX(0); }
-    50%  { transform: translateX(-25%); }
-    100% { transform: translateX(-50%); }
+
+/* Partículas */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fade 4s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }
